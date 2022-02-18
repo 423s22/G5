@@ -10,4 +10,8 @@ Burndown Chart: https://docs.google.com/spreadsheets/d/1fbTvqHgkvX9-SGKE4A3aeYmj
 
 Documentation: https://docs.google.com/document/d/1XqmqsgYq1fYXmSpOW8mcKBggAJceFS2Ye1M_P6J0Zyo/edit?usp=sharing
 
-RYan Krauss
+Github handles 
+
+user-nate; Nathan
+johnjubes; John
+ryankrauss; Ryan
