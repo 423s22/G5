@@ -1,42 +1,24 @@
 <image-gallery data-id="{{ block.id }}">
+<p>--------------------------Extension Boundary--------------------------</p>
   {%- if block.settings.heading -%}
-    <h2>{{ block.settings.heading }}</h2>
+    <h2>{{ product.price | money }}</h2>
   {%- endif -%}
 
   {%- if block.settings.description -%}
-    <p>{{ block.settings.description }}</p>
+    <p>The price will be displayed above, the options below. Eventually the price will change based on selected options</p>
+    {% for option in product.options %}
+    <p>{{ option }}<p>
+    <label>
+      <select>
+      {% for variant in product.variants %}
+        <option>{{ variant.title }} - {{ variant.price | money }}</option>
+      {% endfor %}
+    </select>
+    </label>
+    {% endfor %}
+    
   {%- endif -%}
 
-  <div class="gallery">
-    <figure class="gallery__item gallery__item--1">
-      {%- if block.settings.image_1 -%}
-        <img src="{{ block.settings.image_1 | image_url: width: 1024 }}" alt="{{ block.settings.image_1.alt }}" loading="lazy" width="{{ block.settings.image_1.width }}" height="{{ block.settings.image_1.height }}">
-      {%- else -%}
-        <img src="{{ 'party-hat-frenchie.jpg' | asset_url }}" loading="lazy" width="925" height="617">
-      {%- endif -%}
-    </figure>
-    <figure class="gallery__item gallery__item--2">
-      {%- if block.settings.image_2 -%}
-        <img src="{{ block.settings.image_2 | image_url: width: 1024 }}" alt="{{ block.settings.image_2.alt }}" loading="lazy" width="{{ block.settings.image_2.width }}" height="{{ block.settings.image_2.height }}">
-      {%- else -%}
-        <img src="{{ 'dog-in-birthday-hat.jpg' | asset_url }}" loading="lazy" width="925" height="617">
-      {%- endif -%}
-    </figure>
-    <figure class="gallery__item gallery__item--3">
-      {%- if block.settings.image_3 -%}
-        <img src="{{ block.settings.image_3 | image_url: width: 1024 }}" alt="{{ block.settings.image_3.alt }}" loading="lazy" width="{{ block.settings.image_3.width }}" height="{{ block.settings.image_3.height }}">
-      {%- else -%}
-        <img src="{{ 'all-dogs-go-to-birthday.jpg' | asset_url }}" loading="lazy" width="925" height="921">
-      {%- endif -%}
-    </figure>
-    <figure class="gallery__item gallery__item--4">
-      {%- if block.settings.image_4 -%}
-        <img src="{{ block.settings.image_4 | image_url: width: 1024 }}" alt="{{ block.settings.image_4.alt }}" loading="lazy" width="{{ block.settings.image_4.width }}" height="{{ block.settings.image_4.height }}">
-      {%- else -%}
-        <img src="{{ 'poochie-party-treats.jpg' | asset_url }}" loading="lazy" width="925" height="617">
-      {%- endif -%}
-    </figure>
-  </div>
 
   <image-popup init>
     <template image-popup>
@@ -45,6 +27,8 @@
       </button>
     </template>
   </image-popup>
+
+<p>--------------------------Extension Boundary--------------------------</p>
 
 </image-gallery>
 
@@ -60,13 +44,13 @@
         "type": "text",
         "id": "heading",
         "label": "Heading",
-        "default": "Cute Puppy Gallery"
+        "default": "PRODUCT_PRICE"
       },
       {
         "type": "text",
         "id": "description",
         "label": "Description",
-        "default": "A simple app block that shows a grid of images that can be customized by the merchant. Each image can be selected to show a popup with the full-sized image."
+        "default": "This will display product options"
       },
       {
         "type": "image_picker",
