@@ -5,7 +5,9 @@
   {%- endif -%}
 
   {%- if block.settings.description -%}
-    <p>The price will be displayed above, the options below. Eventually the price will change based on selected options</p>
+      <p>{{block.settings.description}}</p>
+  {%- endif -%}
+    
     {% for option in product.options %}
     <p>{{ option }}<p>
     <label>
@@ -17,16 +19,7 @@
     </label>
     {% endfor %}
     
-  {%- endif -%}
-
-
-  <image-popup init>
-    <template image-popup>
-      <button close-button class="close-button">
-        {%- render 'icon-close' -%}
-      </button>
-    </template>
-  </image-popup>
+  
 
 <p>--------------------------Extension Boundary--------------------------</p>
 
@@ -51,26 +44,6 @@
         "id": "description",
         "label": "Description",
         "default": "This will display product options"
-      },
-      {
-        "type": "image_picker",
-        "id": "image_1",
-        "label": "Image 1"
-      },
-      {
-        "type": "image_picker",
-        "id": "image_2",
-        "label": "Image 2"
-      },
-      {
-        "type": "image_picker",
-        "id": "image_3",
-        "label": "Image 3"
-      },
-      {
-        "type": "image_picker",
-        "id": "image_4",
-        "label": "Image 4"
       }
     ]
   }
