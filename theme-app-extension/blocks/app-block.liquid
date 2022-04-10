@@ -8,8 +8,8 @@
       <p>{{block.settings.description}}</p>
   {%- endif -%}
 
-  <select>
-  {% for product in collections.frontpage.products %}
+<select>
+  {% for product in collections.wacky-hat-collection.products %}
   <option>{{ product.title }} {{product.price | money}}</option>
   {% endfor %}
   </select>
