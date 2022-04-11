@@ -1,13 +1,12 @@
 <image-gallery data-id="{{ block.id }}">
 <p>--------------------------Extension Boundarys--------------------------</p>
   {%- if block.settings.heading -%}
-    <h2>{{ product.price | money }}</h2>
+    <h2>{{ cart.total_price | money }}</h2>
   {%- endif -%}
 
   {%- if block.settings.description -%}
       <p>{{block.settings.description}}</p>
   {%- endif -%}
-
 
 
   {% for product in collections.hat.products %}
@@ -18,7 +17,6 @@
 
   {{ product.title }}
   {% for option in product.options %}
-    <p>{{ option }}<p>
     <label>
     <select>
       {% for variant in product.variants %}
