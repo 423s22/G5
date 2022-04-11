@@ -8,13 +8,16 @@
       <p>{{block.settings.description}}</p>
   {%- endif -%}
 
-<select>
-  {% for product in collections.wacky-hat-collection.products %}
-  <option>{{ product.title }} {{product.price | money}}</option>
-  {% endfor %}
-  </select>
-    
-    {% for option in product.options %}
+
+
+  {% for product in collections.hat.products %}
+
+{% comment %} Might be good to add a conditional here
+
+  if product already in cart, change button from add to cart to remove from cart {% endcomment %}
+
+  {{ product.title }}
+  {% for option in product.options %}
     <p>{{ option }}<p>
     <label>
     <select>
@@ -24,6 +27,18 @@
     </select>
     </label>
     {% endfor %}
+
+  {% comment %} This form is what creates button and sends item to cart {% endcomment %}
+  <form style="margin-bottom:20px" class="product-form" action="/cart/add" data-productid="{{product.id}}"  method="post"> 
+  <input type="hidden" name="id" data-productid="{{product.id}}" class="product-select" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
+  <input type="submit" value="Add To Cart" class="btn btn btn-default" />
+  <input type="hidden" name="return_to" value="back" />
+  </form>
+
+  {% endfor %}
+
+
+    
     
   
 
@@ -54,3 +69,6 @@
     ]
   }
 {% endschema %}
+
+
+
