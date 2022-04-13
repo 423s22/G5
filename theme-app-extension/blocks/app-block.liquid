@@ -9,7 +9,8 @@
   {%- endif -%}
 
 
-  {% for product in collections.hat.products %}
+{% for collection in product.collections %}
+  {% for product in collection.products %}
 
 {% comment %} Might be good to add a conditional here
 
@@ -33,6 +34,7 @@
   <input type="hidden" name="return_to" value="back" />
   </form>
 
+  {% endfor %}
   {% endfor %}
 
 
