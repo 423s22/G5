@@ -1,5 +1,12 @@
 <image-gallery data-id="{{ block.id }}">
 <p>--------------------------Extension Boundaries--------------------------</p>
+
+
+  {% comment %}<p>Nates testing stuff here</p>{% endcomment %}
+  {% comment %}<h2>{{ cart.item_count }} {{ cart.item_count | pluralize: 'item', 'items' }} ({{ cart.total_price | money }})</h2>{% endcomment %}
+  {% comment %}<p>Nates testing ends here</p>{% endcomment %}
+
+
   {%- if block.settings.heading -%}
     <h2>{{ cart.total_price | money }}</h2>
   {%- endif -%}
