@@ -22,20 +22,20 @@
   {% for product in collection.products %}
 
 {% comment %} Might be good to add a conditional here
-
   if product already in cart, change button from add to cart to remove from cart {% endcomment %}
 
-  {{ product.title }} - {{product.id}}
+  {{ product.title }}
   <br>
   {% for option in product.options %}
     <label>
-    {% for variant in product.variants %}
-      {% endfor %}
-    <select>
+
       {% for variant in product.variants %}
-        <option>{{ variant.title }} - {{ variant.price | money }}</option>
+      <button id="add-{{ collections['hat'].id }}" onclick="addAllItemsfromv({{variant.id}}); return false;">Add to cart</button>
+      {{ variant.title }} - {{ variant.price | money }}
+        <br>
       {% endfor %}
-    </select>
+
+    
     <br>
     </label>
     {% endfor %}
@@ -44,7 +44,7 @@
   {% endfor %}
   {% endfor %}
 <br>
-<button id="add-{{ collections['hat'].id }}" onclick="addAllItems('{% for product in collections['hat'].products %}{{ product.selected_or_first_available_variant.id }}{% unless forloop.last %},{% endunless %}{% endfor %}'); return false;">Add to cart</button>
+{% comment %} <button id="add-{{ collections['hat'].id }}" onclick="addAllItems('{% for product in collections['hat'].products %}{{ product.selected_or_first_available_variant.id }}{% unless forloop.last %},{% endunless %}{% endfor %}'); return false;">Add to cart</button> {% endcomment %}
 
 
 
@@ -76,8 +76,4 @@
     ]
   }
 {% endschema %}
-
-
-
-
 
