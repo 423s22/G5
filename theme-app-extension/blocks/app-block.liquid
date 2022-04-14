@@ -30,8 +30,9 @@
     <label>
 
       {% for variant in product.variants %}
-        {{ variant.title }} - {{ variant.price | money }}
-        <button id="add-{{ collections['hat'].id }}" onclick="addAllItemsfromv({{variant.id}}); return false;">Add to cart</button>
+      <button id="add-{{ collections['hat'].id }}" onclick="addAllItemsfromv({{variant.id}}); return false;">Add to cart</button>
+      {{ variant.title }} - {{ variant.price | money }}
+        <br>
       {% endfor %}
 
     
