@@ -43,6 +43,7 @@
         {% endfor %}
 
         {% if isInCart %}
+          <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0">remove</a>
           <button id="add-{{ collections['hat'].id }}" onclick="removeItemFromCart({{variant.id}}); return false;">Remove from cart</button>
         {% else %}
           <button id="add-{{ collections['hat'].id }}" onclick="addItemToCart({{variant.id}}); return false;">Add to cart</button>
