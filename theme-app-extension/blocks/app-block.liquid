@@ -43,9 +43,9 @@
         {% endfor %}
 
         {% if isInCart %}
-          <button id="add-{{ collections['hat'].id }}" onclick="addAllItemsfromv({{variant.id}}); return false;">Remove from cart</button>
+          <button id="add-{{ collections['hat'].id }}" onclick="removeItemFromCart({{variant.id}}); return false;">Remove from cart</button>
         {% else %}
-          <button id="add-{{ collections['hat'].id }}" onclick="addAllItemsfromv({{variant.id}}); return false;">Add to cart</button>
+          <button id="add-{{ collections['hat'].id }}" onclick="addItemToCart({{variant.id}}); return false;">Add to cart</button>
         {% endif %}
 
 
