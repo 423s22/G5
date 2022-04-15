@@ -1,0 +1,310 @@
+{
+  "id": "d0c89632-90a5-4616-a935-15c15127c33f",
+  "version": "2.0",
+  "name": "ESOF423Group5",
+  "url": "https://esof-423-develop.myshopify.com",
+  "tests": [{
+    "id": "f6bfc968-4e36-4527-8276-0a21a90fef86",
+    "name": "Add items to cart",
+    "commands": [{
+      "id": "1f34f7b7-7188-4aa9-af3f-8af689b958c9",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "87089378-a0e0-4d93-b4be-52daa93312f3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8a731ae9-579d-44fd-8a93-36c8f6b3a2a0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Shop all",
+      "targets": [
+        ["linkText=Shop all", "linkText"],
+        ["css=.banner__buttons > .button", "css:finder"],
+        ["xpath=//a[contains(text(),'Shop all')]", "xpath:link"],
+        ["xpath=//div[@id='Banner-template--15694313980122__image_banner']/div[2]/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/collections/all')])[3]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Shop all')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f1027ac-8099-4ca2-bfa5-912e8884b805",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=wacky hat",
+      "targets": [
+        ["linkText=wacky hat", "linkText"],
+        ["css=.grid__item:nth-child(1) > .card-wrapper:nth-child(2) > .card > .card__content .full-unstyled-link", "css:finder"],
+        ["xpath=(//a[contains(text(),'wacky hat')])[2]", "xpath:link"],
+        ["xpath=//ul[@id='product-grid']/li/div/div/div[2]/div/h3/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/products/bitter-sunset')])[2]", "xpath:href"],
+        ["xpath=//li/div/div/div[2]/div/h3/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "95ec8fde-98b6-4a5b-aa7b-e9a89ca5351e",
+      "comment": "",
+      "command": "click",
+      "target": "id=add-403207192794",
+      "targets": [
+        ["id=add-403207192794", "id"],
+        ["css=label:nth-child(6) > #add-403207192794", "css:finder"],
+        ["xpath=//button[@id='add-403207192794']", "xpath:attributes"],
+        ["xpath=//div[@id='shopify-block-d62159b8-8c7c-401d-9520-6a868647510c']/image-gallery/label/button", "xpath:idRelative"],
+        ["xpath=//label/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c82d859-47ab-4fbf-a8ed-52c7b9f0db57",
+      "comment": "",
+      "command": "click",
+      "target": "id=add-403207192794",
+      "targets": [
+        ["id=add-403207192794", "id"],
+        ["css=label:nth-child(8) > #add-403207192794", "css:finder"],
+        ["xpath=//button[@id='add-403207192794']", "xpath:attributes"],
+        ["xpath=//div[@id='shopify-block-d62159b8-8c7c-401d-9520-6a868647510c']/image-gallery/label[2]/button", "xpath:idRelative"],
+        ["xpath=//label[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b25a1323-66d6-4a56-be0d-d339aa8cc195",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cart-count-bubble",
+      "targets": [
+        ["css=.cart-count-bubble", "css:finder"],
+        ["xpath=//a[@id='cart-icon-bubble']/div", "xpath:idRelative"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e2f30eb-30c2-4163-8c09-34fc9caa71f7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Continue shopping",
+      "targets": [
+        ["linkText=Continue shopping", "linkText"],
+        ["css=.underlined-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Continue shopping')]", "xpath:link"],
+        ["xpath=//div[@id='shopify-section-template--15694313750746__cart-items']/cart-items/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/collections/all')])[3]", "xpath:href"],
+        ["xpath=//cart-items/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Continue shopping')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "92392116-56e0-4d78-b47e-d9250e9118c5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Wacky Pants",
+      "targets": [
+        ["linkText=Wacky Pants", "linkText"],
+        ["css=.grid__item:nth-child(5) .card > .card__content .full-unstyled-link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Wacky Pants')])[2]", "xpath:link"],
+        ["xpath=//ul[@id='product-grid']/li[5]/div/div/div[2]/div/h3/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/products/wacky-pants')])[2]", "xpath:href"],
+        ["xpath=//li[5]/div/div/div[2]/div/h3/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77980cac-b033-441e-8735-5f818927369e",
+      "comment": "",
+      "command": "click",
+      "target": "id=add-403207192794",
+      "targets": [
+        ["id=add-403207192794", "id"],
+        ["xpath=//button[@id='add-403207192794']", "xpath:attributes"],
+        ["xpath=//div[@id='shopify-block-d62159b8-8c7c-401d-9520-6a868647510c']/image-gallery/label/button", "xpath:idRelative"],
+        ["xpath=//label/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c29bc218-9498-4849-9d9f-f4af47d35b27",
+      "comment": "",
+      "command": "click",
+      "target": "id=add-403207192794",
+      "targets": [
+        ["id=add-403207192794", "id"],
+        ["xpath=//button[@id='add-403207192794']", "xpath:attributes"],
+        ["xpath=//div[@id='shopify-block-d62159b8-8c7c-401d-9520-6a868647510c']/image-gallery/label/button", "xpath:idRelative"],
+        ["xpath=//label/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6fefc9a9-9f49-4d0b-9848-535bb2b9ded7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cart-count-bubble > span:nth-child(1)",
+      "targets": [
+        ["css=.cart-count-bubble > span:nth-child(1)", "css:finder"],
+        ["xpath=//a[@id='cart-icon-bubble']/div/span", "xpath:idRelative"],
+        ["xpath=//div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2eb95631-c9bb-4464-a556-b663222521ca",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cart-count-bubble > span:nth-child(1)",
+      "targets": [
+        ["css=.cart-count-bubble > span:nth-child(1)", "css:finder"],
+        ["xpath=//a[@id='cart-icon-bubble']/div/span", "xpath:idRelative"],
+        ["xpath=//div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "551475d4-1bd5-4d07-8831-4236e269616a",
+    "name": "Add and remove item from cart",
+    "commands": [{
+      "id": "87d10c93-5f52-4e04-9ae4-9775cf76a2ad",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4724c268-c57d-4e6d-a572-6d93e737d22e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "863x930",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e38c82e-89c7-47b6-9c6e-3c4465a89e50",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=wacky hat",
+      "targets": [
+        ["linkText=wacky hat", "linkText"],
+        ["css=#Slide-template--15694313980122__featured_collection-1 .card > .card__content .full-unstyled-link", "css:finder"],
+        ["xpath=(//a[contains(text(),'wacky hat')])[2]", "xpath:link"],
+        ["xpath=//li[@id='Slide-template--15694313980122__featured_collection-1']/div/div/div[2]/div/h3/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/products/bitter-sunset')])[2]", "xpath:href"],
+        ["xpath=//li/div/div/div[2]/div/h3/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b76063ba-6abd-41ab-80d0-75c192a31951",
+      "comment": "",
+      "command": "click",
+      "target": "id=add-403207192794",
+      "targets": [
+        ["id=add-403207192794", "id"],
+        ["css=label:nth-child(6) > #add-403207192794", "css:finder"],
+        ["xpath=//button[@id='add-403207192794']", "xpath:attributes"],
+        ["xpath=//div[@id='shopify-block-d62159b8-8c7c-401d-9520-6a868647510c']/image-gallery/label/button", "xpath:idRelative"],
+        ["xpath=//label/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2be01f1-594f-449e-94d7-ffcf7a241a43",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=remove",
+      "targets": [
+        ["linkText=remove", "linkText"],
+        ["css=label > a", "css:finder"],
+        ["xpath=//a[contains(text(),'remove')]", "xpath:link"],
+        ["xpath=//div[@id='shopify-block-d62159b8-8c7c-401d-9520-6a868647510c']/image-gallery/label/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/cart/change?line=1&quantity=0')]", "xpath:href"],
+        ["xpath=//label/a", "xpath:position"],
+        ["xpath=//a[contains(.,'remove')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7794c498-bb12-42c1-8469-45521fb9f964",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Continue shopping",
+      "targets": [
+        ["linkText=Continue shopping", "linkText"],
+        ["css=.cart__warnings > .button", "css:finder"],
+        ["xpath=(//a[contains(text(),'Continue shopping')])[2]", "xpath:link"],
+        ["xpath=//div[@id='shopify-section-template--15694313750746__cart-items']/cart-items/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/collections/all')])[4]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "573e7aba-431c-4980-91e8-92cb72fab3f6",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c8cca4c4-f9d8-422d-8a62-9ca3be2c6142",
+    "name": "Remove from loaded cart",
+    "commands": [{
+      "id": "85580ee5-5b37-426b-86fd-5459d564dd93",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c5c1c133-e760-4c86-9700-70c15a579870",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cart-count-bubble",
+      "targets": [
+        ["css=.cart-count-bubble", "css:finder"],
+        ["xpath=//a[@id='cart-icon-bubble']/div", "xpath:idRelative"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "90a75037-8958-4e82-8252-82d1ab0620d9",
+      "comment": "",
+      "command": "click",
+      "target": "css=#Remove-1 .icon",
+      "targets": [
+        ["css=#Remove-1 .icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "41989cc1-b880-4f87-b398-233b17746d06",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-remove",
+      "targets": [
+        ["css=.icon-remove", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "e011e5a7-f3f7-4fb9-be2b-094dc2be87a3",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2af14889-5105-4ad6-998b-d4778661fffe",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://esof-423-develop.myshopify.com/"],
+  "plugins": []
+}
