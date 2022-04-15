@@ -17,6 +17,11 @@
       <p>{{block.settings.description}}</p>
   {%- endif -%}
 
+  {% comment %} get items in cart {% endcomment %}
+  {%for item in cart.items %}
+    {{item.id}}
+  {% endfor %}
+
 
 {% for collection in product.collections %}
   {% for product in collection.products %}
@@ -28,9 +33,24 @@
   <br>
   {% for option in product.options %}
     <label>
-
       {% for variant in product.variants %}
-      <button id="add-{{ collections['hat'].id }}" onclick="addAllItemsfromv({{variant.id}}); return false;">Add to cart</button>
+
+        {% assign isInCart = false %}
+        {%for item in cart.items %}
+          {% if item.id == variant.id %}
+            {% assign isInCart = true %}
+          {% endif %}
+        {% endfor %}
+
+        {% if isInCart %}
+          <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0">remove</a>
+          {% comment %} <button id="add-{{ collections['hat'].id }}" onclick="removeItemFromCart({{variant.id}}); return false;">Remove from cart</button> {% endcomment %}
+        {% else %}
+          <button id="add-{{ collections['hat'].id }}" onclick="addItemToCart({{variant.id}}); return false;">Add to cart</button>
+        {% endif %}
+
+
+      
       {{ variant.title }} - {{ variant.price | money }}
         <br>
       {% endfor %}
