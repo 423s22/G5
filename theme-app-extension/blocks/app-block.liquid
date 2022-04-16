@@ -17,10 +17,6 @@
       <p>{{block.settings.description}}</p>
   {%- endif -%}
 
-  {% comment %} get items in cart {% endcomment %}
-  {%for item in cart.items %}
-    {{item.id}}
-  {% endfor %}
 
 
 {% for collection in product.collections %}
