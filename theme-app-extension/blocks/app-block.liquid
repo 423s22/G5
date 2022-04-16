@@ -41,26 +41,24 @@
             {% assign isInCart = true %}
           {% endif %}
         {% endfor %}
-		<style>
-			.remove{
-				background-color: blue;
-			}
-		</style>
+
 
         {% if isInCart %}
-          <a id = "remove" href="/cart/change?line={{ forloop.index }}&amp;quantity=0">Remove Item</a>
+
+          <a id="removeLink" href="/cart/change?line={{ forloop.index }}&amp;quantity=0">Remove item</a>
+
           {% comment %} <button id="add-{{ collections['hat'].id }}" onclick="removeItemFromCart({{variant.id}}); return false;">Remove from cart</button> {% endcomment %}
         {% else %}
           <button id="add-{{ collections['hat'].id }}" onclick="addItemToCart({{variant.id}}); return false;">Add to cart</button>
         {% endif %}
 
 
-      
+
       {{ variant.title }} - {{ variant.price | money }}
         <br>
       {% endfor %}
 
-    
+
     <br>
     </label>
     {% endfor %}
