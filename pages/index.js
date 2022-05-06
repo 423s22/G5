@@ -31,7 +31,11 @@ export default function Index() {
          </EmptyState>
         </Layout>
       </Page>
+<<<<<<< HEAD
     ); 
+=======
+    );
+>>>>>>> 31538ccecc13bc8d57205f124b095b5307d28503
 };
 
 
