@@ -4,3 +4,19 @@ image-gallery figure {
   overflow: hidden;
 }
 
+#removeLink{
+  color: black;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  border-radius: 2px;
+  text-decoration: none;
+  font:inherit;
+  font-size: 14px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+
+}
+
+
+
